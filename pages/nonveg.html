@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Non-Veg Dishes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .menu-img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .menu-img {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    /* Show More Toggle Styling */
+    #more-nonveg-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    #toggle-more:checked ~ #more-nonveg-menu {
+      max-height: 1000px;
+    }
+
+    .toggle-label {
+      display: inline-block;
+      background-color: #dc3545;
+      color: white;
+      padding: 10px 20px;
+      margin: 20px auto;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .toggle-label:hover {
+      background-color: #bb2d3b;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">Restoran</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="py-5 text-center bg-danger text-white">
+  <h1 class="display-5 fw-bold">Top Selling Non-Veg Dishes</h1>
+  <p class="lead">Bold flavors, juicy textures — crafted for meat lovers!</p>
+</header>
+
+<!-- Non-Veg Dishes -->
+<section class="container py-5">
+  <div class="row g-4 text-center">
+
+    <!-- Dish Cards -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://j6e2i8c9.delivery.rocketcdn.me/wp-content/uploads/2020/09/Chicken-Biryani-Recipe-01-1-500x500.jpg" class="menu-img card-img-top" alt="Chicken Biryani">
+        <div class="card-body">
+          <h5 class="card-title">Chicken Biryani</h5>
+          <p class="card-text">Fragrant rice layered with juicy spiced chicken.</p>
+          <p class="fw-bold text-danger">₹250</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/butter-chicken.jpg" class="menu-img card-img-top" alt="Butter Chicken">
+        <div class="card-body">
+          <h5 class="card-title">Butter Chicken</h5>
+          <p class="card-text">Tender chicken in creamy buttery tomato gravy.</p>
+          <p class="fw-bold text-danger">₹270</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Instant-Pot-Chicken-Curry-Recipe-500x500.jpg" class="menu-img card-img-top" alt="Chicken Curry">
+        <div class="card-body">
+          <h5 class="card-title">Chicken Curry</h5>
+          <p class="card-text">Classic Indian chicken curry in spicy masala.</p>
+          <p class="fw-bold text-danger">₹240</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://headbangerskitchen.com/wp-content/uploads/2024/08/ROGANJOSH-H2.jpg" class="menu-img card-img-top" alt="Mutton Rogan Josh">
+        <div class="card-body">
+          <h5 class="card-title">Mutton Rogan Josh</h5>
+          <p class="card-text">Rich and spicy Kashmiri-style mutton curry.</p>
+          <p class="fw-bold text-danger">₹320</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://www.chefspencil.com/wp-content/uploads/Chicken-65.jpg" class="menu-img card-img-top" alt="Chicken 65">
+        <div class="card-body">
+          <h5 class="card-title">Chicken 65</h5>
+          <p class="card-text">Crispy fried spicy chicken starter from South India.</p>
+          <p class="fw-bold text-danger">₹180</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="https://vismaifood.com/storage/app/uploads/public/daa/96d/7bc/thumb__1200_0_0_0_auto.jpg" class="menu-img card-img-top" alt="Fish Curry">
+        <div class="card-body">
+          <h5 class="card-title">Fish Curry</h5>
+          <p class="card-text">Coastal-style fish curry in coconut-spice gravy.</p>
+          <p class="fw-bold text-danger">₹260</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Show More Section -->
+<div class="text-center">
+  <input type="checkbox" id="toggle-more" style="display: none;">
+  <label for="toggle-more" class="toggle-label">Show More Non-Veg Dishes</label>
+
+  <div id="more-nonveg-menu" class="container mt-4">
+    <h4 class="text-center mb-4">More Non-Veg Dishes</h4>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <table class="table table-striped table-hover text-start">
+          <thead class="table-danger">
+            <tr>
+              <th>Dish Name</th>
+              <th class="text-end">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Chicken Do Pyaza</td><td class="text-end">₹260</td></tr>
+            <tr><td>Mutton Korma</td><td class="text-end">₹340</td></tr>
+            <tr><td>Egg Curry</td><td class="text-end">₹180</td></tr>
+            <tr><td>Fish Fry</td><td class="text-end">₹220</td></tr>
+            <tr><td>Prawn Masala</td><td class="text-end">₹300</td></tr>
+            <tr><td>Chicken Handi</td><td class="text-end">₹270</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  © 2025 Restauranto | All rights reserved.
+</footer>
+
+</body>
+</html>
